@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="belousovromnik_brain_games", 
-    version="0.0.1",
+    name="belousovromnik_brain_games",
+    version="0.0.2",
     author="belousov romnik",
     author_email="belousov.romnik@yandex.ru",
     description="A small example package",
