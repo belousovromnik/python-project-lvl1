@@ -1,9 +1,11 @@
 
 публикация новой версии
 
+python3.8 setup.py sdist bdist_wheel
 python setup.py sdist bdist_wheel
 
 python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*-0.0.2-*
+python3.8 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*-0.0.3-*
 
 
 

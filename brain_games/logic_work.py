@@ -1,4 +1,3 @@
-import prompt
 import random
 from brain_games.cli import run
 
@@ -13,7 +12,7 @@ def is_even():
     nam_user = run('May I have your name? ')
     print("Hello, {}!". format(nam_user))
 
-    i = 1 
+    i = 1
     while i <= COUNT_QUESTIONS:
         cnt = random.randint(BEGIN_RANDOM, END_RANDOM)
         print('Question: {}'.format(cnt))
@@ -31,7 +30,9 @@ def is_even():
         elif correct_ans == CORRECT_ANSWER_NO and answer == CORRECT_ANSWER_NO:
             print('Correct!')
         else:
-            print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, correct_ans))
+            txt = "'{}' is wrong answer ;(.".format(answer)
+            txt += "Correct answer was '{}'.".format(correct_ans)
+            print(txt)
             print("Let's try again, {}!".format(nam_user))
             break
         i += 1
