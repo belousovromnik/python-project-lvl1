@@ -1,9 +1,7 @@
-from brain_games.logic_work import is_even
+from brain_games.games.games_even import is_even
 
 
 def main():
-    print('Welcome to the Brain Games!!!')
-    print('Answer "yes" if number even otherwise answer "no".')
     is_even()
 
 

@@ -1,16 +1,14 @@
 import random
-from brain_games.cli import run
+from brain_games.cli import run, welcome
+from brain_games.const import COUNT_QUESTIONS
+from brain_games.const import CORRECT_ANSWER_NO
+from brain_games.const import CORRECT_ANSWER_YES
+from brain_games.const import BEGIN_RANDOM
+from brain_games.const import END_RANDOM
 
 
 def is_even():
-    COUNT_QUESTIONS = 3
-    CORRECT_ANSWER_YES = 'yes'
-    CORRECT_ANSWER_NO = 'no'
-    BEGIN_RANDOM = 1
-    END_RANDOM = 100
-
-    nam_user = run('May I have your name? ')
-    print("Hello, {}!". format(nam_user))
+    nam_user = welcome('Answer "yes" if number even otherwise answer "no".')
 
     i = 1
     while i <= COUNT_QUESTIONS:
