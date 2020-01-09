@@ -1,4 +1,9 @@
 
+poetry build
+
+перед публикацией обязательно
+poetry run flake8 brain_games
+
 публикация новой версии
 
 python3.8 setup.py sdist bdist_wheel
@@ -8,6 +13,9 @@ python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*-0.0
 python3.8 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*-0.0.3-*
 
 
+poetry build
+poetry publish -r belousovromnik_brain_games
+
 
 запуск локально
 poetry run brain-games
@@ -15,3 +23,14 @@ poetry run brain-games
 
 python -m pip install --user --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple belousovromnik-brain-games
 
+
+установка проекта из test.pypi.org
+pip install -i https://test.pypi.org/simple/ belousovromnik-brain-games==0.0.4
+pip uninstall belousovromnik-brain-games
+
+python3 -m pip install --user --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple belousovromnik-brain-games
+
+sudo pip install -i https://test.pypi.org/simple/ belousovromnik-brain-games
+sudo pip uninstall belousovromnik-brain-games
+
+.venv/bin/python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple --extra-index-url https://pypi.org/simple belousovromnik-brain-games
