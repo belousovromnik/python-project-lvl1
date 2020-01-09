@@ -10,3 +10,5 @@ Brain-Even
 [![asciicast](https://asciinema.org/a/dq3nftO2wohnSFZBtbscinO5E.svg)](https://asciinema.org/a/dq3nftO2wohnSFZBtbscinO5E)
 Brain-Calc
 [![asciicast](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx.svg)](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx)
+Игра НОД
+[![asciicast](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx.svg)](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx)
