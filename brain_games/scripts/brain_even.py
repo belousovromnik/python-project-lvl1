@@ -1,10 +1,9 @@
-from brain_games.cli import run
 from brain_games.logic_work import is_even
 
 
 def main():
     print('Welcome to the Brain Games!!!')
-    run()
+    print('Answer "yes" if number even otherwise answer "no".')
     is_even()
 
 

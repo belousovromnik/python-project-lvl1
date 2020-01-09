@@ -1,6 +1,5 @@
 import prompt
 
 
-def run():
-    name = prompt.string('May I have your name? ')
-    print("Hello, {}!". format(name))
+def run(str):
+    return prompt.string(str)
