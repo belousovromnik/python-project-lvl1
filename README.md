@@ -14,3 +14,5 @@ Brain-Calc
 [![asciicast](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx.svg)](https://asciinema.org/a/JfaCB5FMFtzx1YbgPaUxp7oDx)
 Игра "Арифметическая прогрессия"
 [![asciicast](https://asciinema.org/a/NXZHI4oMy6u17JpJ4b23W4pms.svg)](https://asciinema.org/a/NXZHI4oMy6u17JpJ4b23W4pms)
+Игра "Простое ли число?"
+[![asciicast](https://asciinema.org/a/csyUZyNvVL5lKhjOfVmVxYqOQ.svg)](https://asciinema.org/a/csyUZyNvVL5lKhjOfVmVxYqOQ)
