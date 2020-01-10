@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="belousovromnik_brain_games",
-    version="0.0.9",
+    version="0.0.11",
     author="belousov romnik",
     author_email="belousov.romnik@yandex.ru",
     description="A small example package",
