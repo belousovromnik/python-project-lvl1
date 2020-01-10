@@ -1,39 +1,23 @@
 import random
-import prompt
-from brain_games.cli import welcome, correct, incorrect, congratulations
-from brain_games.const import COUNT_QUESTIONS
 from brain_games.const import BEGIN_RANDOM
 from brain_games.const import END_RANDOM
+from brain_games.const import ANSWER_STRING
 
 
 def progression():
-    nam_user = welcome('Find the greatest common divisor of given numbers.')
+    LONG_PROGRESSION = 10
+    POSITION_QUE = random.randint(1, LONG_PROGRESSION)
+    PROGRESSION_ITER = random.randint(1, LONG_PROGRESSION)
+    first_el = random.randint(BEGIN_RANDOM, END_RANDOM)
 
-    i = 1
-    while i <= COUNT_QUESTIONS:
-        LONG_PROGRESSION = 10
-        POSITION_QUE = random.randint(1, LONG_PROGRESSION)
-        PROGRESSION_ITER = random.randint(1, LONG_PROGRESSION)
-        first_el = random.randint(BEGIN_RANDOM, END_RANDOM)
-
-        prog = [str(first_el), ]
-        correct_ans = 0
-        for ii in range(1, LONG_PROGRESSION + 1):
-            if ii == POSITION_QUE:
-                prog.append('..')
-                correct_ans = first_el + PROGRESSION_ITER * ii
-            else:
-                prog.append(str(first_el + PROGRESSION_ITER * ii))
-
-        strr = ' '.join(prog)
-        print('Question: {}'.format(strr))
-        answer = prompt.integer('Your answer: ')
-
-        if correct_ans == answer:
-            correct()
+    prog = [str(first_el), ]
+    correct_ans = 0
+    for ii in range(1, LONG_PROGRESSION + 1):
+        if ii == POSITION_QUE:
+            prog.append('..')
+            correct_ans = first_el + PROGRESSION_ITER * ii
         else:
-            incorrect(answer, correct_ans, nam_user)
-            break
-        i += 1
-    else:
-        congratulations(nam_user)
+            prog.append(str(first_el + PROGRESSION_ITER * ii))
+
+    ANSWER_STRING['games']['question'] = ' '.join(prog)
+    ANSWER_STRING['games']['answer_correct'] = correct_ans

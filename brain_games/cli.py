@@ -19,11 +19,16 @@ def correct(strr='Correct!'):
 
 
 def incorrect(answer, correct_ans, nam_user):
-    txt = "'{}' is wrong answer ;(.".format(answer)
-    txt += "Correct answer was '{}'.".format(correct_ans)
-    print(txt)
+    print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(
+        answer,
+        correct_ans))
     print("Let's try again, {}!".format(nam_user))
 
 
 def congratulations(nam_user):
     print("Congratulations, {}!".format(nam_user))
+
+
+def question(question):
+    print('Question: {}'.format(question))
+    return prompt.string('Your answer: ')

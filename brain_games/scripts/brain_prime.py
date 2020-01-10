@@ -2,7 +2,7 @@ from brain_games.games.games import games
 
 
 def main():
-    games('gcd')
+    games('prime')
 
 
 if __name__ == '__main__':
