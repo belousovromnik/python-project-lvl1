@@ -1,10 +1,13 @@
 import random
 from brain_games.const import BEGIN_RANDOM
 from brain_games.const import END_RANDOM
-from brain_games.const import ANSWER_STRING
 
 
-def gcd():
+def greeting():
+    return 'Find the greatest common divisor of given numbers.'
+
+
+def main_action():
     first_el = random.randint(BEGIN_RANDOM, END_RANDOM)
     second_el = random.randint(BEGIN_RANDOM, END_RANDOM)
 
@@ -14,5 +17,7 @@ def gcd():
         if first_el % ii == 0 and second_el % ii == 0:
             correct_ans = ii
 
-    ANSWER_STRING['games']['question'] = '{} {}'.format(first_el, second_el)
-    ANSWER_STRING['games']['answer_correct'] = str(correct_ans)
+    str_to_question = '{} {}'.format(first_el, second_el)
+    correct_ans = str(correct_ans)
+
+    return str_to_question, correct_ans

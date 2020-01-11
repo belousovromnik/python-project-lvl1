@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "belousovromnik_brain_games"
 version = "0.1.0"
-description = "Учебный проект по курсу обучения Python, проект №1"
+description = "Python. Leaning project №1"
 authors = ["belousov romnik <belousov.romnik@yandex.ru>"]
 repository = 'https://github.com/belousovromnik/python-project-lvl1'
 packages = [
