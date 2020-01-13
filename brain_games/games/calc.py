@@ -1,6 +1,7 @@
 import random
-from brain_games.const import BEGIN_RANDOM
-from brain_games.const import END_RANDOM
+from operator import add, sub, mul
+from brain_games.constants import MINIMAL_RANDOM
+from brain_games.constants import MAXIMAL_RANDOM
 
 
 def greeting():
@@ -8,17 +9,12 @@ def greeting():
 
 
 def main_action():
-    first_el = random.randint(BEGIN_RANDOM, END_RANDOM)
-    second_el = random.randint(BEGIN_RANDOM, END_RANDOM)
-    what_do = random.choice(['+', '-', '*'])
+    first_el = random.randint(MINIMAL_RANDOM, MAXIMAL_RANDOM)
+    second_el = random.randint(MINIMAL_RANDOM, MAXIMAL_RANDOM)
+    operator_dict = {'+': add, '-': sub, '*': mul}
 
-    correct_ans = 0
-    if what_do == '+':
-        correct_ans = first_el + second_el
-    elif what_do == '-':
-        correct_ans = first_el - second_el
-    elif what_do == '*':
-        correct_ans = first_el * second_el
+    what_do = random.choice(list(operator_dict))
+    correct_ans = operator_dict[what_do](first_el, second_el)
 
     str_to_question = '{} {} {}'.format(
         first_el,

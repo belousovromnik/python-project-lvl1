@@ -1,6 +1,6 @@
 import random
-from brain_games.const import BEGIN_RANDOM
-from brain_games.const import END_RANDOM
+from brain_games.constants import MINIMAL_RANDOM
+from brain_games.constants import MAXIMAL_RANDOM
 
 
 def greeting():
@@ -8,13 +8,11 @@ def greeting():
 
 
 def main_action():
-    cnt = random.randint(BEGIN_RANDOM, END_RANDOM)
+    cnt = random.randint(MINIMAL_RANDOM, MAXIMAL_RANDOM)
 
-    correct_ans = ''
+    correct_ans = 'no'
     if cnt % 2 == 0:
         correct_ans = 'yes'
-    elif cnt % 2 == 1:
-        correct_ans = 'no'
 
     str_to_question = str(cnt)
 
