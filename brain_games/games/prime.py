@@ -1,4 +1,5 @@
 import random
+import math
 from brain_games.constants import MINIMAL_RANDOM
 from brain_games.constants import MAXIMAL_RANDOM
 
@@ -9,12 +10,23 @@ def greeting():
 
 def main_action():
     cnt = random.randint(MINIMAL_RANDOM, MAXIMAL_RANDOM)
-    correct_ans = 'yes'
-    for ii in range(2, cnt):
-        if cnt % ii == 0:
-            correct_ans = 'no'
-            break
 
     str_to_question = str(cnt)
 
+    correct_ans = 'no'
+    if is_prime(cnt) == True:
+        correct_ans = 'yes'
+
     return str_to_question, correct_ans
+
+
+def is_prime(number):
+    if number in {1, 2}:
+        return True
+    if number % 2 == 0:
+        return False
+    sqrt_number = math.floor(math.sqrt(number))
+    for i in range(3, sqrt_number + 1, 2):
+        if number % i == 0:
+            return False
+    return True
