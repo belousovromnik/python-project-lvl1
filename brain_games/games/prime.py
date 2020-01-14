@@ -14,7 +14,7 @@ def main_action():
     str_to_question = str(cnt)
 
     correct_ans = 'no'
-    if is_prime(cnt) == True:
+    if is_prime(cnt) is True:
         correct_ans = 'yes'
 
     return str_to_question, correct_ans
