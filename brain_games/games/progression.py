@@ -1,6 +1,5 @@
 import random
-from brain_games.constants import MINIMAL_RANDOM
-from brain_games.constants import MAXIMAL_RANDOM
+from brain_games.constants import MINIMAL_RANDOM, MAXIMAL_RANDOM, PROGRESSION_LENGTH
 
 
 def greeting():
@@ -8,23 +7,21 @@ def greeting():
 
 
 def main_action():
-    # длина ряда, не стал выносить в файл с константами
-    # тк данная переменная используется только в этой функции
-    progression_length = 10
     # номер скрытой позиции
-    hidden_item_number = random.randint(1, progression_length)
+    hidden_item_number = random.randint(1, PROGRESSION_LENGTH)
     # величина итерации данного ряда
-    row_iteration_size = random.randint(1, progression_length)
+    row_iteration_size = random.randint(1, PROGRESSION_LENGTH)
     first_el = random.randint(MINIMAL_RANDOM, MAXIMAL_RANDOM)
 
     prog = [str(first_el), ]
     correct_ans = 0
-    for ii in range(1, progression_length + 1):
+    for ii in range(1, PROGRESSION_LENGTH + 1):
+        item_element = first_el + row_iteration_size * ii
         if ii == hidden_item_number:
             prog.append('..')
-            correct_ans = first_el + row_iteration_size * ii
+            correct_ans = item_element
         else:
-            prog.append(str(first_el + row_iteration_size * ii))
+            prog.append(str(item_element))
 
     str_to_question = ' '.join(prog)
     correct_ans = str(correct_ans)

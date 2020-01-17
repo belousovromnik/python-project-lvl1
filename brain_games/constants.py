@@ -4,3 +4,5 @@ QUESTION_NUMBER = 3
 MINIMAL_RANDOM = 1
 # максимальное значение при вычислении случайных чисел
 MAXIMAL_RANDOM = 100
+# длина ряда
+PROGRESSION_LENGTH = 10

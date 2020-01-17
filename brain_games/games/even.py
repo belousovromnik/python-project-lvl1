@@ -1,6 +1,5 @@
 import random
-from brain_games.constants import MINIMAL_RANDOM
-from brain_games.constants import MAXIMAL_RANDOM
+from brain_games.constants import MINIMAL_RANDOM, MAXIMAL_RANDOM
 
 
 def greeting():
